@@ -1,0 +1,141 @@
+@import "../defaults/colors";
+@import "../defaults/breakpoints";
+
+
+
+
+@media screen and (min-width: $large) {
+
+
+
+        header {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 33% 33% 33%;
+            grid-gap: 0;
+        }
+        #nav-items {
+            margin-bottom: 10px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            font-size: 25px;
+            padding: 5px;
+            padding-right: 10px;
+            background-color: $primary-color;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(0,1fr));
+            justify-content: space-around;
+            align-items: end;
+            a{
+                font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            text-decoration: none;
+            color: $secondary-color;
+           
+
+            }
+             
+        
+        }
+        h1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            text-align: center;
+            font-size: 60px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: $secondary-color;
+        }
+
+        .logo-name {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            justify-content: center;
+            z-index: 2;
+
+
+        }
+
+        .grid-container {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: $primary-color;
+            margin-bottom: 10px;
+            z-index: 1;
+        }
+}
+
+@media screen and (max-width: $large) {
+    
+        
+
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            h1 {
+                font-size: 50px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: $secondary-color;
+                margin-top: 3px;
+            }
+
+            .button {
+                display: block;
+                margin: 7px 0;
+                padding: 10px;
+                background-color: $secondary-color;
+                border-radius: 10px;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                color: $primary-background;
+                width: 200px;
+
+            }
+
+            img {
+                width: 290px;
+            }
+            .grid-container {
+                display: none;
+            }
+        }
+    
+
+}
+@media screen and (max-width: $medium) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+
+        h1 {
+            font-size: 35px;
+        }
+        img {
+            width: 60%;
+        }
+        .button {
+            width: 80%;
+        }
+    }
+}
+
+
+
+
+
+
+
