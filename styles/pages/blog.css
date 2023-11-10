@@ -210,47 +210,6 @@
     color: #eab44b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  main form {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  main form label {
-    color: #eab44b;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  main form input[type=email] {
-    width: 40%;
-    border: 3px solid #333;
-    border-radius: 6px;
-    background-color: #7d7875;
-  }
-  main form input[type=text], main form textarea {
-    width: 85%;
-    height: 100px;
-    border: 3px solid #333;
-    border-radius: 6px;
-    background-color: #7d7875;
-    margin-bottom: 5px;
-  }
-  main form input[type=submit] {
-    background-color: #7d7875;
-    color: #eab44b;
-    width: 100px;
-    padding: 5px 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    border-radius: 6px;
-  }
-  main form input[type=submit]:hover {
-    background-color: #484544;
-  }
 }
 @media screen and (max-width: 991px) {
   main {
@@ -279,48 +238,6 @@
     margin-bottom: 40px;
     word-wrap: break-word;
     max-width: 75%;
-  }
-  main form {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  main form label {
-    color: #eab44b;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  main form input[type=email] {
-    width: 60dvw;
-    border: 3px solid #333;
-    border-radius: 6px;
-    background-color: #7d7875;
-  }
-  main form input[type=text], main form textarea {
-    width: 85dvw;
-    height: 70px;
-    border: 3px solid #333;
-    border-radius: 6px;
-    background-color: #7d7875;
-    margin-bottom: 5px;
-  }
-  main form input[type=submit] {
-    background-color: #7d7875;
-    color: #eab44b;
-    width: 100px;
-    padding: 5px 5px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    border-radius: 6px;
-  }
-  main form input[type=submit]:hover {
-    background-color: #484544;
   }
 }
 body {
