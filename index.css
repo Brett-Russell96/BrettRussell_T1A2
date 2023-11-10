@@ -15,7 +15,7 @@
     padding: 5px;
     padding-right: 10px;
     padding-left: 10px;
-    background-color: #7d7875;
+    background-color: #757270;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -50,7 +50,7 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: #7d7875;
+    background-color: #757270;
     margin-bottom: 10px;
     z-index: 1;
   }
@@ -78,7 +78,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    color: #403e3e;
+    color: #383636;
     width: 200px;
   }
   header img {
@@ -109,7 +109,7 @@
     display: grid;
     grid-template-columns: 5% 45% 45% 5%;
     grid-template-rows: 20% 20% 20% 20% 20%;
-    background-color: #7d7875;
+    background-color: #8c8c8c;
     grid-gap: 0;
     border: 0;
     margin-top: 25px;
@@ -178,7 +178,41 @@
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: repeat(3, auto);
-    background-color: #403e3e;
+    background-color: #383636;
+  }
+  li {
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  .additional-text {
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 70%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+  }
+  .download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    max-width: 30%;
+    text-align: center;
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: #8c8c8c;
+    border: 3px solid #333;
+    border-radius: 6px;
+    margin-left: 27%;
+    transition: background-color 0.3s;
+  }
+  .download-link:hover {
+    filter: brightness(75%);
   }
   .about-section {
     grid-column-start: 2;
@@ -193,7 +227,7 @@
   }
   h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #7d7875;
+    color: #8c8c8c;
   }
   main {
     display: grid;
@@ -219,6 +253,39 @@
     align-items: center;
     margin-bottom: 40px;
   }
+  main li {
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+  }
+  main .additional-text {
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 70%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 17%;
+  }
+  main .download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    max-width: 30%;
+    text-align: center;
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: #8c8c8c;
+    border: 3px solid #333;
+    border-radius: 6px;
+    margin-left: 5%;
+    transition: background-color 0.3s;
+  }
+  main .download-link:hover {
+    filter: brightness(75%);
+  }
   main .about-section {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -226,7 +293,7 @@
     max-width: 75%;
   }
   main .about-section h2 {
-    color: #7d7875;
+    color: #8c8c8c;
   }
   main .about-section .about-text {
     color: #eab44b;
@@ -242,7 +309,7 @@
 }
 body {
   margin: 0;
-  background-color: #403e3e;
+  background-color: #383636;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

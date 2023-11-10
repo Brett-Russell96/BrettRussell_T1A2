@@ -24,7 +24,7 @@
             padding: 5px;
             padding-right: 10px;
             padding-left: 10px;
-            background-color: $primary-color;
+            background-color: $tertiary-color;
             width: 100%;
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(0,1fr));
@@ -67,7 +67,7 @@
             grid-column-end: 2;
             grid-row-start: 1;
             grid-row-end: 2;
-            background-color: $primary-color;
+            background-color: $tertiary-color;
             margin-bottom: 10px;
             z-index: 1;
         }
