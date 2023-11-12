@@ -1,3 +1,4 @@
+```scss
 @import "../defaults/colors";
 @import "../defaults/breakpoints";
 
@@ -7,18 +8,73 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-    }
-     a {
-       text-decoration: none;; 
+    
+        .blog-link {
+            text-decoration: none;
+            text-align: center;
+            margin: 10px;
+            border: 8px solid $tertiary-color;
+            border-radius: 3px;
+            background-color: $tertiary-color;
+
+        
+            .img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 2px;
+            }
+
+            p {
+                margin: 0;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                color: $secondary-color;
+            }
+        }
     }
 
-    .img {
-        max-width: 100%;
-        height: auto;
-        margin: 0 2px;
+    .blog-section {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: repeat(5, 15%);
+        gap: 1px;
 
+        .blog-post-image {
 
-    }
+            img{
+                max-width: 100%;
+                height: auto;
+                display: block;
+                width: 100%;
+            }
+        }
+
+            #blog-image-1 {
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+
+            #blog-image-2 {
+                grid-column-start: 1;
+                grid-row-start: 3;
+            }
+
+            #blog-image-3 {
+                grid-column-start: 1;
+                grid-row-start: 5;
+            }
+
+            #blog-image-4 {
+                grid-column-start: 1;
+                grid-row-start: 7;
+            }
+
+            #blog-image-5 {
+                grid-column-start: 1;
+                grid-row-start: 9;
+            }
+        }
+    
         
     
 
@@ -66,7 +122,7 @@
     }
 
     .about-section {
-        grid-column-start: 2;
+        grid-column: 2;
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
@@ -90,8 +146,8 @@
 
 
         .custom-text {
-            grid-column-start: 2;
-            grid-row-start: 1;
+            grid-column: 2;
+            grid-row: 1;
             display: flex;
             justify-content: space-evenly;
             align-items: flex-start;
@@ -180,3 +236,4 @@
     }
 }
 
+```

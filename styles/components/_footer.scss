@@ -3,21 +3,31 @@
 
 
 @media screen and (min-width: $large) {
-    footer {
-      
-  
-
     
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
 
+    main {
+        flex: 1;
+    }
+
+    footer {
             width: 100%;
             bottom: 0;
             display: grid;
             grid-template-columns: 5% 45% 45%;
             grid-template-rows: 20% 20% 20% 20% 20%;
-            background-color: $tertiary-color;
+            background-color: $primary-background;
             grid-gap: 0;
             border: 0;
             margin-top: 25px;
+            position: relative;
+            margin-top: auto;
+    }
 
 
             .social-media {
@@ -57,8 +67,8 @@
                         font-size: 20px;
                     }
                 }
-    }
-}
+            }
+
 
 @media screen and (max-width: $large) {
     footer { 
