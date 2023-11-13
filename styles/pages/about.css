@@ -54,7 +54,7 @@
     justify-content: center;
     z-index: 2;
   }
-  .logo-name:hover {
+  .logo-name img:hover {
     filter: brightness(75%);
   }
   .background-box {

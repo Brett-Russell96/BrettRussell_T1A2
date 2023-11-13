@@ -66,10 +66,15 @@
             grid-row-end: 4;
             justify-content: center;
             z-index: 2;
+            
+            img {
 
-            &:hover {
-                filter: brightness(75%);
+                &:hover {
+                    filter: brightness(75%);
+                }
+
             }
+            
 
 
             }
