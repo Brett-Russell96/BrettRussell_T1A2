@@ -34,3 +34,9 @@ This is my original Sitemap, the structure is an 'index.html' homepage that conn
  The audience for this website would ideally be an employer with technical knowledge in IT and software development who is seeking a potential developer for their team.
 
  ## Tech Stack
+* HTML
+* SCSS
+* CSS
+* JAVAscript
+* Netlify
+* Github

@@ -24,7 +24,19 @@
         grid-template-columns: 30% 70%;
         grid-template-rows: repeat(3, auto);
         background-color: $primary-background;
+/* graphical component, photo */
+        img {
+            grid-column: 1;
+            grid-row: 3;
+            margin-top: 60px;
+            justify-self: center;
+            border: 4px solid $tertiary-color;
+            border-radius: 4px;
+            height: 200px;
+            width: 300px;
+        }
     }
+
 
     .about-section {
         grid-column: 2;
@@ -54,6 +66,15 @@
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 40px;
+/*graphical component, photo */
+        img {
+            height: 200px;
+            width: 300px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border: 4px solid $tertiary-color;
+            border-radius: 4px;
+        }
 /* text component, about text */
         .about-section {
             text-align: center;
