@@ -1,239 +1,36 @@
-```scss
-@import "../defaults/colors";
-@import "../defaults/breakpoints";
+# T1A2 Portfolio
 
-@media screen and (min-width: $large) {
+## Overview
+This portfolio website was created to demonstrate my ability to build websites using HTML and CSS elements. It also aims to offer insight into my skills and experience, reflect my personality, and provide a glimpse into my motives for pursuing web development.  
 
-    .image-section {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    
-        .blog-link {
-            text-decoration: none;
-            text-align: center;
-            margin: 10px;
-            border: 8px solid $tertiary-color;
-            border-radius: 3px;
-            background-color: $tertiary-color;
+It also serves as a platform for potential employers to establish future contact with me if they find my skills align with their needs.
 
-        
-            .img {
-                max-width: 100%;
-                height: auto;
-                margin: 0 2px;
-            }
+## Sitemap
+![This is my original Sitemap](./images/Sitemap.png)
+This is my original Sitemap, the structure is an 'index.html' homepage that connects to all other pages. Each page is accessible from one another using a navigation bar. 
 
-            p {
-                margin: 0;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-weight: bold;
-                color: $secondary-color;
-            }
-        }
-    }
+ Initially, my plan was to include each blog post in its own separate HTML file. However, I later on made the decision to use a scroll-down link structure to keep all the posts on the same file and make the site more convenient.
 
-    .blog-section {
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: repeat(5, 15%);
-        gap: 1px;
+ ## Site Features
+ The site features a similar interface across all pages which utilises a well thought out color structure designed for clear visability and a pleasing aesthetic.
 
-        .blog-post-image {
+ The site was built for compatibility across 3 wireframes which are pictured below:
 
-            img{
-                max-width: 100%;
-                height: auto;
-                display: block;
-                width: 100%;
-            }
-        }
+ ![large Wireframe](./images/large-wireframe.png) 
 
-            #blog-image-1 {
-                grid-column-start: 1;
-                grid-row-start: 1;
-            }
+ ![Medium Wireframe](./images/medium-wireframe.png)
 
-            #blog-image-2 {
-                grid-column-start: 1;
-                grid-row-start: 3;
-            }
+ ![small Wireframe](./images/small-wireframe.png)
 
-            #blog-image-3 {
-                grid-column-start: 1;
-                grid-row-start: 5;
-            }
+ There is a navigation bar across the top of each webpage to move between each HTML file, the site logo at the top left of the display also acts as a link to the home page.  
+ On smaller displays the nav bar is replaced with button links to each page for improved aesthetic and accessability.  
+ There are separate pages which contain sections for:
+ * Skills and previous experience including a link to my resume.
+ * Contact where there is a link to my email address. 
+ * Blog which contains an assortment of blogs and accompanying images.
+ * About which contains general information about my, personality, motivations and personal interests.
 
-            #blog-image-4 {
-                grid-column-start: 1;
-                grid-row-start: 7;
-            }
+ ## Target Audience
+ The audience for this website would ideally be an employer with technical knowledge in IT and software development who is seeking a potential developer for their team.
 
-            #blog-image-5 {
-                grid-column-start: 1;
-                grid-row-start: 9;
-            }
-        }
-    
-        
-    
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: repeat(3, auto);
-        background-color: $primary-background;
-    }
-    li {
-        color: $secondary-color;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        margin-bottom: 3px;
-    }
-    .additional-text {
-        color: $secondary-color;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-        word-wrap: break-word;
-        max-width: 70%;
-        margin-top: 50px;
-        margin-bottom: 20px;
-        margin-left: 10%;
-    }
-    .download-link {
-        display: inline-block;
-        padding: 10px 20px;
-        text-decoration: none;
-        max-width: 30%;
-        text-align: center;
-        color: $secondary-color;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        background-color: $primary-color;
-        border: 3px solid #333;
-        border-radius: 6px;
-        margin-left: 27%;
-        transition: background-color 0.3s;
-
-    }
-
-    .download-link:hover {
-        filter: brightness(75%);
-    }
-
-    .about-section {
-        grid-column: 2;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-
-    .about-text {
-        margin-top: 10px;
-        color: $secondary-color;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    h2 {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: $primary-color;
-
-    }
-    main {
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: 25% 25% 25% 25%;
-
-
-        .custom-text {
-            grid-column: 2;
-            grid-row: 1;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            margin-bottom: 300px;
-            color: $secondary-color;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-           
-
-        }
-
-        
-    }
-
-}
-
-@media screen and (max-width: $large) {
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 40px;
-
-        li {
-            color: $secondary-color;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin-bottom: 10px;
-        }
-
-        .additional-text {
-            color: $secondary-color;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            text-align: center;
-            word-wrap: break-word;
-            max-width: 70%;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            margin-left: 14%;
-        }
-        .download-link {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
-            max-width: 30%;
-            text-align: center;
-            color: $secondary-color;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: bold;
-            background-color: $primary-color;
-            border: 3px solid #333;
-            border-radius: 6px;
-            margin-left: 1%;
-            transition: background-color 0.3s;
-    
-        }
-    
-        .download-link:hover {
-            filter: brightness(75%);
-        }
-
-        .about-section {
-            text-align: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            word-wrap: break-word;
-            max-width: 75%;
-            h2 {
-                color: $primary-color;
-            }
-            .about-text {
-                color: $secondary-color
-            }
-
-        }
-
-        .custom-text {
-            text-align: center;
-            color: $secondary-color;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            margin-bottom: 40px;
-            word-wrap: break-word;
-            max-width: 75%;
-        }
-
-
-
-    }
-}
-
-```
+ ## Tech Stack

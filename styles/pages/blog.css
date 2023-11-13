@@ -1,4 +1,5 @@
 @media screen and (min-width: 991px) {
+  /* used grid display for desktop screens, thought it to be accessable and a nice aethetic */
   header {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -6,6 +7,7 @@
     grid-gap: 0;
     max-width: 100%;
   }
+  /* graphical component, navigation links */
   #nav-items {
     margin-bottom: 10px;
     grid-column-start: 2;
@@ -22,12 +24,16 @@
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     justify-content: space-around;
     align-items: end;
+    /* text component, heading */
   }
   #nav-items a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     text-decoration: none;
     color: #eab44b;
+  }
+  #nav-items a:hover {
+    filter: brightness(75%);
   }
   h1 {
     grid-column-start: 2;
@@ -39,6 +45,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #eab44b;
   }
+  /* graphical component, site logo (acts as link to homepage)*/
   .logo-name {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -46,6 +53,9 @@
     grid-row-end: 4;
     justify-content: center;
     z-index: 2;
+  }
+  .logo-name:hover {
+    filter: brightness(75%);
   }
   .background-box {
     grid-column-start: 1;
@@ -58,11 +68,15 @@
   }
 }
 @media screen and (max-width: 991px) {
+  /* switched to a flex display for smaller screens, the buttons are more appealing for tablets and smartphones and they're easy to see */
   header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    /* text component, heading */
+    /* text component, nav links */
+    /* graphical component, site logo (link to homepage) */
   }
   header h1 {
     font-size: 50px;
@@ -83,16 +97,23 @@
     color: #383636;
     width: 200px;
   }
+  header .button:active {
+    filter: brightness(75%);
+  }
   header img {
     width: 290px;
   }
 }
+/* made minor adjustment to button and logo size to fit smartphones better */
 @media screen and (max-width: 650px) {
   header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
+    /* text component */
+    /* graphical component */
+    /* text component */
   }
   header h1 {
     font-size: 35px;
@@ -103,7 +124,11 @@
   header .button {
     width: 80%;
   }
+  header .button:active {
+    filter: brightness(75%);
+  }
 }
+/* I used a flex display to set my body dimensions and keep the footer section at the bottom of screens */
 @media screen and (min-width: 991px) {
   body {
     min-height: 100vh;
@@ -114,6 +139,7 @@
   main {
     flex: 1;
   }
+  /* I used a grid display for larger screens so I could place social links and contaxct details side by side and have better control over their exact placement. */
   footer {
     width: 100%;
     bottom: 0;
@@ -127,6 +153,7 @@
     position: relative;
     margin-top: auto;
   }
+  /* graphical component, social media links */
   .social-media {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -144,6 +171,7 @@
     color: #eab44b;
     font-size: 35px;
   }
+  /* text component, contact information */
   .info {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -163,6 +191,9 @@
 @media screen and (max-width: 991px) {
   footer {
     width: 100%;
+    /*graphical component, social media links */
+    /* for smaller screens I used a flex display for the footer, I thought itd be more clear to just have social links positioned above contact details */
+    /*text component, contact information*/
   }
   footer .social-media {
     display: flex;
@@ -173,7 +204,7 @@
   }
   footer .social-media a i {
     color: #eab44b;
-    font-size: 30px;
+    font-size: 45px;
   }
   footer .info p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -182,10 +213,19 @@
   }
 }
 @media screen and (max-width: 650px) {
-  footer .info p {
-    font-size: 85%;
+  /* I decided to make some slight differences in icon and text sizes for improved visability when swithing between tablet and smartphone sizes */
+  footer {
+    /*graphical component, social media (not sure if we're meant to note all these tbh just putting in to be sure) */
+  }
+  footer .social-media a i {
+    font-size: 30px;
+  }
+  /* text component, contact info */
+  .info p {
+    font-size: 80%;
   }
 }
+/*graphical component, body layout */
 body {
   margin: 0;
   background-color: #383636;
@@ -195,13 +235,31 @@ body {
   justify-content: space-between;
 }
 
+/*graphical element, scroll bar */
+::-webkit-scrollbar {
+  height: 1rem;
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8c8c8c;
+  border-radius: 6px;
+  border-width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #383636;
+}
+
 @media screen and (min-width: 991px) {
+  /* graphical component, page layout*/
   main {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 25% 25% 25% 25%;
+    /* text component, intro text style */
   }
-  main .custom-text {
+  main .home-text {
     grid-column: 2;
     grid-row: 1;
     display: flex;
@@ -219,8 +277,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 40px;
+    /* text component, text */
   }
-  main .custom-text {
+  main .home-text {
     text-align: center;
     color: #eab44b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -229,70 +288,184 @@ body {
     max-width: 75%;
   }
 }
+/*graphical element, scroll bar */
+::-webkit-scrollbar {
+  height: 1rem;
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8c8c8c;
+  border-radius: 6px;
+  border-width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #383636;
+}
+
 @media screen and (min-width: 991px) {
-  .image-section {
+  /* used flex display to span images across the display */
+  /*text and graphical component, scrolldown links with images and blog subheadings */
+  .link-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    min-width: 100vw;
+    /* applied a border which I then rounded for a smooth aesthetic, adjusted image margin to be consistent across desktop screensizes. also boldened text to improve readability. */
   }
-  .image-section .blog-link {
+  .link-section .blog-link {
     text-decoration: none;
     text-align: center;
-    margin: 10px;
+    margin: 5px;
     border: 8px solid #757270;
     border-radius: 3px;
     background-color: #757270;
   }
-  .image-section .blog-link .img {
-    max-width: 100%;
+  .link-section .blog-link .img {
     height: auto;
     margin: 0 2px;
+    width: 200px;
+    max-height: 200px;
   }
-  .image-section .blog-link p {
+  .link-section .blog-link p {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: #eab44b;
   }
-  .blog-section {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: repeat(5, 15%);
-    gap: 1px;
+  /* used a flex display for more even spacing, applied a top and bottom margin to clearly separate from the link sections, also applied a gap for clear distinction between blog posts. */
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 300px;
+    margin-bottom: 150px;
+    margin-left: 50px;
   }
-  .blog-section .blog-post-image img {
+  .blog-container .blog-post {
+    display: flex;
+    align-items: flex-start;
+    /* I used a predetermined size for the images which I'd adjusted earlier via terminal resizing so I only needed to apply a border to keep the images neat and presentable, used a block display for more ease when creating the border and to seperate from text */
+    /* graphical component, blog images */
+    /*for text I used the same flex display for uniformity. adjusted the fonts and colors to keep with the visual theme of the site. */
+    /* text component, blog posts */
+  }
+  .blog-container .blog-post .blog-post-image img {
     max-width: 100%;
     height: auto;
     display: block;
+    width: 200px;
+    max-height: 200px;
+    border: 10px solid #8c8c8c;
+    border-radius: 4px;
+    background-color: #8c8c8c;
+    margin-right: 25px;
+    margin-top: 26px;
+  }
+  .blog-container .blog-post .blog-post-section {
+    border: 3px solid #757270;
+    border-radius: 4px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-container .blog-post .blog-post-section h2 {
+    color: #8c8c8c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-self: flex-start;
+  }
+  .blog-container .blog-post .blog-post-section h4 {
+    color: #757270;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .blog-container .blog-post .blog-post-section .blog-text {
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
-  }
-  .blog-section #blog-image-1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-  .blog-section #blog-image-2 {
-    grid-column-start: 1;
-    grid-row-start: 3;
-  }
-  .blog-section #blog-image-3 {
-    grid-column-start: 1;
-    grid-row-start: 5;
-  }
-  .blog-section #blog-image-4 {
-    grid-column-start: 1;
-    grid-row-start: 7;
-  }
-  .blog-section #blog-image-5 {
-    grid-column-start: 1;
-    grid-row-start: 9;
+    text-align: center;
   }
 }
 @media screen and (max-width: 991px) {
+  /* for smaller screensizes I used a flex display and centered all content, i also set widths for text to keep the display clear for smaller screen widths. I still used margins to better separate each individual section. */
   main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+  }
+  /* text component, blog posts */
+  .blog-post-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* text component (i think), blog heading */
+  h2 {
+    color: #8c8c8c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-self: center;
+  }
+  h4 {
+    color: #757270;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .blog-text {
+    border: 3px solid #757270;
+    border-radius: 4px;
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 70%;
+    text-align: center;
+  }
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog-post {
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  /*graphical component, blog images */
+  .blog-post-image {
+    display: flex;
+    justify-content: center;
+  }
+  .blog-post-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 200px;
+    max-height: 200px;
+    border: 10px solid #8c8c8c;
+    border-radius: 4px;
+  }
+  .blog-post-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* graphical and text component, scrolldown links to blog with subheading */
+  .link-section {
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 350px;
+    margin-top: 80px;
+  }
+  .link-section .blog-link {
+    text-decoration: none;
+    border: 10px solid #757270;
+    border-radius: 4px;
+    background-color: #eab44b;
+  }
+  .link-section .blog-link p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #383636;
   }
 }/*# sourceMappingURL=blog.css.map */

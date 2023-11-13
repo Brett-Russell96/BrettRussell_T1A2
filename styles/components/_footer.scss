@@ -1,7 +1,7 @@
 @import "../defaults/colors";
 @import "../defaults/breakpoints";
 
-
+/* I used a flex display to set my body dimensions and keep the footer section at the bottom of screens */
 @media screen and (min-width: $large) {
     
     body {
@@ -14,7 +14,7 @@
     main {
         flex: 1;
     }
-
+/* I used a grid display for larger screens so I could place social links and contaxct details side by side and have better control over their exact placement. */
     footer {
             width: 100%;
             bottom: 0;
@@ -28,7 +28,7 @@
             position: relative;
             margin-top: auto;
     }
-
+/* graphical component, social media links */
 
             .social-media {
 
@@ -51,6 +51,7 @@
                     }
                 }
             }
+/* text component, contact information */
 
             .info {  
                 grid-column-start: 3;
@@ -74,8 +75,8 @@
     footer { 
 
         width: 100%;
-        
-
+    /*graphical component, social media links */    
+    /* for smaller screens I used a flex display for the footer, I thought itd be more clear to just have social links positioned above contact details */
         .social-media {
            
             display: flex;
@@ -88,11 +89,11 @@
                 
                 i {
                     color: $secondary-color;
-                    font-size: 30px;
+                    font-size: 45px;
                 }
             }
         }
-
+    /*text component, contact information*/
         .info {  
             
                 p {
@@ -101,20 +102,29 @@
                     text-align: center;
                 }
             }
-}
-}
+        }
+    }
 
 @media screen and (max-width: $medium) {
+
+    /* I decided to make some slight differences in icon and text sizes for improved visability when swithing between tablet and smartphone sizes */
     footer {
-        .info {
-            p {
-                font-size: 85%;
+    /*graphical component, social media (not sure if we're meant to note all these tbh just putting in to be sure) */
+        .social-media {
+            a 
+              i {
+                font-size: 30px;
+              }
             }
         }
-
+    /* text component, contact info */
+        .info {
+            p {
+                font-size: 80%;
+            }
+        }
     }
     
-}
 
 
 

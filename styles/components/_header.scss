@@ -6,7 +6,7 @@
 
 @media screen and (min-width: $large) {
 
-
+/* used grid display for desktop screens, thought it to be accessable and a nice aethetic */
 
         header {
             display: grid;
@@ -15,6 +15,7 @@
             grid-gap: 0;
             max-width: 100%;
         }
+/* graphical component, navigation links */
         #nav-items {
             margin-bottom: 10px;
             grid-column-start: 2;
@@ -37,11 +38,15 @@
                     font-weight: bold;
                     text-decoration: none;
                     color: $secondary-color;
+
+                    &:hover {
+                        filter: brightness(75%);
+                    }
             
 
             }
              
-        
+    /* text component, heading */    
         }
         h1 {
             grid-column-start: 2;
@@ -53,7 +58,7 @@
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             color: $secondary-color;
         }
-
+    /* graphical component, site logo (acts as link to homepage)*/
         .logo-name {
             grid-column-start: 1;
             grid-column-end: 2;
@@ -61,6 +66,10 @@
             grid-row-end: 4;
             justify-content: center;
             z-index: 2;
+
+            &:hover {
+                filter: brightness(75%);
+            }
 
 
             }
@@ -79,20 +88,20 @@
 @media screen and (max-width: $large) {
     
         
-
+    /* switched to a flex display for smaller screens, the buttons are more appealing for tablets and smartphones and they're easy to see */
         header {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-
+    /* text component, heading */
             h1 {
                 font-size: 50px;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 color: $secondary-color;
                 margin-top: 3px;
             }
-
+    /* text component, nav links */
             .button {
                 display: block;
                 margin: 7px 0;
@@ -106,8 +115,12 @@
                 color: $primary-background;
                 width: 200px;
 
-            }
+                &:active {
+                    filter: brightness(75%);
+                }
 
+            }
+    /* graphical component, site logo (link to homepage) */
             img {
                 width: 290px;
             }
@@ -116,21 +129,29 @@
     
 
 }
+
+/* made minor adjustment to button and logo size to fit smartphones better */
 @media screen and (max-width: $medium) {
     header {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         text-align: center;
-
+    /* text component */
         h1 {
             font-size: 35px;
         }
+    /* graphical component */
         img {
             width: 60%;
         }
+    /* text component */
         .button {
             width: 80%;
+
+            &:active {
+                filter: brightness(75%);
+            }
         }
     }
 }
