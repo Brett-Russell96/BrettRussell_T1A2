@@ -105,7 +105,7 @@
   }
 }
 /* made minor adjustment to button and logo size to fit smartphones better */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 678px) {
   header {
     display: flex;
     flex-direction: column;
@@ -215,7 +215,7 @@
     text-align: center;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 678px) {
   /* I decided to make some slight differences in icon and text sizes for improved visability when swithing between tablet and smartphone sizes */
   footer {
     /*graphical component, social media (not sure if we're meant to note all these tbh just putting in to be sure) */
@@ -378,7 +378,7 @@ body {
     filter: brightness(75%);
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 678px) {
   main {
     display: flex;
     flex-direction: column;

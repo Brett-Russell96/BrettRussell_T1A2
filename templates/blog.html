@@ -37,24 +37,24 @@
     </header>
     <!--text and graphical component, scrolldown links for blog posts-->
     <main class="link-section">
-        <a href="#" class= "blog-link" data-target="blog-post-1">
-            <img src="../images/Naruto.jpg" alt="Blog Post 1">
+        <a href="#" class= "blog-link image1" data-target="blog-post-1">
+            <img src="../images/Yuji.jpg" alt="Blog Post 1">
             <p>Blog Post 1</p>
         </a>
-        <a href="#" class="blog-link" data-target="blog-post-2">
+        <a href="#" class="blog-link image2" data-target="blog-post-2">
             <img src="../images/Gintoki.jpg" alt="Blog Post 2">
             <p>Blog Post 2</p>
         </a>
-        <a href="#" class="blog-link" data-target="blog-post-3">
+        <a href="#" class="blog-link image3" data-target="blog-post-3">
             <img src="../images/Midoriya.jpg" alt="Blog Post 3">
             <p>Blog Post 3</p>
         </a>
-        <a href="#" class="blog-link" data-target="blog-post-4">
+        <a href="#" class="blog-link image4" data-target="blog-post-4">
             <img src="../images/Tanjiro.jpg" alt="Blog Post 4">
             <p>Blog Post 4</p>
         </a>
-        <a href="#" class="blog-link" data-target="blog-post-5">
-            <img src="../images/Yuji.jpg" alt="Blog Post 5">
+        <a href="#" class="blog-link image5" data-target="blog-post-5">
+            <img src="../images/Naruto.jpg" alt="Blog Post 5">
             <p>Blog Post 5</p>
         </a>
       </main>
@@ -62,7 +62,7 @@
     <main class="blog-container">
         <div class="blog-post" id="blog-post-1">
             <div class="blog-post-image">
-                <img src="../images/Naruto.jpg" alt="Blog Post 1 Image">
+                <img src="../images/Yuji.jpg" alt="Blog Post 1 Image">
             </div>
             <div class="blog-post-section">
                 <h2>Blog Post 1</h2>
@@ -114,7 +114,7 @@
     <!--text and graphical component, blog post and image (not sure if I was supposed to do for all lol)-->
         <div class="blog-post" id="blog-post-5">
             <div class="blog-post-image">
-                <img src="../images/Yuji.jpg" alt="Blog Post 5 Image">
+                <img src="../images/Naruto.jpg" alt="Blog Post 5 Image">
             </div>
             <div class="blog-post-section">
                 <h2>Blog Post 5</h2>
@@ -158,7 +158,7 @@
                     const targetElement = document.getElementById(targetId);
     
                     if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                        targetElement.scrollIntoView();
                     }
                 });
             });
