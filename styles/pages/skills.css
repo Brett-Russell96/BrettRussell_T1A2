@@ -41,6 +41,7 @@
     grid-row-start: 2;
     grid-row-end: 4;
     text-align: center;
+    max-width: 95%;
     font-size: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #eab44b;
@@ -80,6 +81,8 @@
   }
   header h1 {
     font-size: 50px;
+    max-width: 93%;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #eab44b;
     margin-top: 3px;
@@ -116,7 +119,7 @@
     /* text component */
   }
   header h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   header img {
     width: 60%;
@@ -382,7 +385,7 @@ body {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     word-wrap: break-word;
-    max-width: 75%;
+    max-width: 80%;
   }
   main .skills-section h2 {
     color: #8c8c8c;
@@ -399,8 +402,7 @@ body {
     color: #eab44b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    word-wrap: break-word;
-    max-width: 70%;
+    max-width: 80%;
     margin-top: 50px;
     margin-bottom: 20px;
     margin-left: 14%;
@@ -422,5 +424,19 @@ body {
   }
   main .download-link:hover {
     filter: brightness(75%);
+  }
+}
+@media screen and (max-width: 678px) {
+  .download-link {
+    min-width: 100px;
+  }
+  .skills-text {
+    font-size: 80%;
+  }
+  li {
+    font-size: 85%;
+  }
+  .additional-text {
+    font-size: 80%;
   }
 }/*# sourceMappingURL=skills.css.map */

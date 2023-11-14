@@ -97,7 +97,7 @@
             text-align: center;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             word-wrap: break-word;
-            max-width: 75%;
+            max-width: 80%;
             h2 {
                 color: $primary-color;
             }
@@ -116,8 +116,7 @@
             color: $secondary-color;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
-            word-wrap: break-word;
-            max-width: 70%;
+            max-width: 80%;
             margin-top: 50px;
             margin-bottom: 20px;
             margin-left: 14%;
@@ -143,5 +142,23 @@
         .download-link:hover {
             filter: brightness(75%);
         }
+    }
+}
+@media screen and (max-width: $medium) {
+
+    .download-link {
+        min-width: 100px;
+    }
+
+    .skills-text {
+        font-size: 80%;
+    }
+
+    li {
+        font-size: 85%;
+    }
+
+    .additional-text {
+        font-size: 80%;
     }
 }

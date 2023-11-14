@@ -81,6 +81,13 @@
     
         }
     }
+
+    @media screen and (max-width: $medium) {
+
+        .home-text {
+            font-size: 80%;
+        }
+    }
     
     
     

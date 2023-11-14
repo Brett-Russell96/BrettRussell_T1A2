@@ -41,6 +41,7 @@
     grid-row-start: 2;
     grid-row-end: 4;
     text-align: center;
+    max-width: 95%;
     font-size: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #eab44b;
@@ -80,6 +81,8 @@
   }
   header h1 {
     font-size: 50px;
+    max-width: 93%;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #eab44b;
     margin-top: 3px;
@@ -116,7 +119,7 @@
     /* text component */
   }
   header h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   header img {
     width: 60%;
@@ -291,6 +294,11 @@ body {
     max-width: 75%;
   }
 }
+@media screen and (max-width: 678px) {
+  .home-text {
+    font-size: 80%;
+  }
+}
 /*graphical element, scroll bar */
 ::-webkit-scrollbar {
   height: 1rem;
@@ -388,12 +396,17 @@ body {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     word-wrap: break-word;
-    max-width: 75%;
+    max-width: 80%;
   }
   main .about-section h2 {
     color: #8c8c8c;
   }
   main .about-section .about-text {
     color: #eab44b;
+  }
+}
+@media screen and (max-width: 678px) {
+  .about-section .about-text {
+    font-size: 80%;
   }
 }/*# sourceMappingURL=about.css.map */
