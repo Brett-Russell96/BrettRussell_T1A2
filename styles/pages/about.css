@@ -313,15 +313,30 @@ body {
     background-color: #383636;
     /* graphical component, photo */
   }
-  .about-container img {
+  .home-photo {
     grid-column: 1;
-    grid-row: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
     margin-top: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
     justify-self: center;
     border: 4px solid #757270;
     border-radius: 4px;
     height: 200px;
     width: 300px;
+  }
+  /*graphical component, photo */
+  .gym-photo {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    align-self: center;
+    justify-self: center;
+    border: 4px solid #757270;
+    border-radius: 4px;
+    height: 300px;
+    width: 240pxpx;
   }
   .about-section {
     grid-column: 2;
@@ -349,9 +364,18 @@ body {
     /*graphical component, photo */
     /* text component, about text */
   }
-  main img {
+  main .home-photo {
     height: 200px;
-    width: 300px;
+    max-width: 90%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 4px solid #757270;
+    border-radius: 4px;
+    /* graphical component, photo */
+  }
+  main .gym-photo {
+    height: 290px;
+    max-width: 85%;
     margin-top: 30px;
     margin-bottom: 20px;
     border: 4px solid #757270;
