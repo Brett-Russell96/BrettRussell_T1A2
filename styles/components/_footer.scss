@@ -48,6 +48,10 @@
                     i {
                         color: $secondary-color;
                         font-size: 35px;
+
+                        &:hover {
+                            filter: brightness(75%);
+                        }
                     }
                 }
             }

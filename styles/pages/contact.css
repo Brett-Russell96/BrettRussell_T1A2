@@ -171,6 +171,9 @@
     color: #eab44b;
     font-size: 35px;
   }
+  .social-media a i:hover {
+    filter: brightness(75%);
+  }
   /* text component, contact information */
   .info {
     grid-column-start: 3;
