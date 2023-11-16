@@ -331,6 +331,7 @@ body {
     display: inline-block;
     padding: 10px;
     justify-self: center;
+    align-self: center;
     background-color: #eab44b;
     border-radius: 10px;
     text-align: center;
