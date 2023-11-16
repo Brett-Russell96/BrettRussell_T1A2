@@ -1,6 +1,6 @@
 @import"../../index";
 
-   /*graphical element, scroll bar */
+   /*graphical element, used scroll bar to adjust size, thumb to round and track to adjust background colour */
    ::-webkit-scrollbar {
     height: 1rem;
     width: 0.7rem;
@@ -17,15 +17,13 @@
 }
 
 @media screen and (min-width: $large) {
-/* used flex display to span images across the display */
-
-/*text and graphical component, scrolldown links with images and blog subheadings */
+/*text and graphical component, used display flex to span images across the display, applied margin to create gaps between images, then created borders and adjusted colours and text. added &:hover so that the colour of the image and baclground darkens when hovered over with mouse */
         .link-section {
             display: flex;
             justify-content: space-around;
             align-items: center;
             min-width: 100vw;
- /* applied a border which I then rounded for a smooth aesthetic, adjusted image margin to be consistent across desktop screensizes. also boldened text to improve readability. */       
+     
             .blog-link {
                 text-decoration: none;
                 text-align: center;
@@ -34,7 +32,6 @@
                 border-radius: 3px;
                 background-color: $tertiary-color;
 
-            
                 .img {
                     height: auto;
                     margin: 0 2px;
@@ -48,24 +45,24 @@
                     font-weight: bold;
                     color: $secondary-color;
                 }
+                &:hover {
+                    filter: brightness(75%);
+                }
             }
         }
-    /* used a flex display for more even spacing, applied a top and bottom margin to clearly separate from the link sections, also applied a gap for clear distinction between blog posts. */ 
-    
+    /* text component, used display flex and flex direction column to display posts vertically down the page then created a larger gap between them with gap. used margins to separate from other content sections */ 
         .blog-container {
             display: flex;
             flex-direction: column;
-            gap: 100px;
+            gap: 350px;
             margin-top: 300px;
             margin-bottom: 150px;
             margin-left: 50px;
-        
+     /* text component, used display flex to better position each post */   
             .blog-post {
                 display: flex;
                 align-items: flex-start;
-     /* I used a predetermined size for the images which I'd adjusted earlier via terminal resizing so I only needed to apply a border to keep the images neat and presentable, used a block display for more ease when creating the border and to seperate from text */   
-
-     /* graphical component, blog images */
+    /* graphical component, adjusted height and width dimensions to keep the images the same size and in the same position as the screenwidth changes created a border and then adjusted exact position using margin. */
                 .blog-post-image {
                     img {
                         max-width: 100%;
@@ -80,9 +77,7 @@
                         margin-top: 26px;
                     }
                 }
-    /*for text I used the same flex display for uniformity. adjusted the fonts and colors to keep with the visual theme of the site. */
-
-    /* text component, blog posts */
+    /*text component, created borders for all posts, used flex: 1 to ensure the image displays at its actual size, used display flex to display the headings and posts vertically then adjusted colors and fonts. */
                 .blog-post-section {
                     border: 3px solid $tertiary-color;
                     border-radius: 4px;
@@ -113,9 +108,6 @@
         }
         
 }
-
-
-
 @media screen and (max-width: $large) {
     /* for smaller screensizes I used a flex display and centered all content, i also set widths for text to keep the display clear for smaller screen widths. I still used margins to better separate each individual section. */
         main {
@@ -125,68 +117,7 @@
             align-items: center;
             margin-bottom: 40px;
         }
-    /* text component, blog posts */
-        .blog-post-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center; 
-        }
-    /* text component (i think), blog heading */
-        h2 {
-            color: $primary-color;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            align-self: center; 
-        }
-
-        h4 {
-            color: $tertiary-color;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        .blog-text {
-            border: 3px solid $tertiary-color;
-            border-radius: 4px;
-            color: $secondary-color;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            width: 70%;
-            text-align: center; 
-        }
-
-
-        .blog-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .blog-post {
-            width: 100%;
-            margin-bottom: 200px;
-        }
-    /*graphical component, blog images */
-        .blog-post-image {
-            display: flex;
-            justify-content: center;
-            
-            img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                width: 200px;
-                max-height: 200px;
-                border: 10px solid $primary-color;
-                border-radius: 4px;
-
-            }
-        }
-        .blog-post-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    /* graphical and text component, scrolldown links to blog with subheading */
+    /* graphical component, I set the anchor links to a grid display as I thought this aesthetic would be a better aesthetic for tablets, created gaps between the images with gap, separated content sections with margin-top and margin-bottom, margin-left ensures the images stay centered as the screenwidth changes, then placed each image separately into their section of the grid to fit the display properly, then created borders, configured colors, and further adjusted sizings. */
         .link-section {
             display: grid;
             grid-template-columns: 33% 33% 33%;
@@ -223,7 +154,7 @@
                 }
             }
         }
-    /* graphical component, blog anchor links */
+
         .image1 {
             grid-column-start: 1;
             grid-column-end: 2;
@@ -258,29 +189,15 @@
             grid-row: 2;
             justify-self: center;
         }
-
-
-        
-    }
-
-@media screen and (max-width: $medium) {
-
- main {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-    /* text component, blog posts */
+    /* text component, set flex display for blog posts and made everyting diplay vertically using flex direction, then configured positioning with justify-content and align-items. */
         .blog-post-section {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             text-align: center; 
         }
-    /* text component (i think), blog heading */
+    /* adjusted colours and font on headings */
         h2 {
             color: $primary-color;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -291,16 +208,14 @@
             color: $tertiary-color;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-
+    /* text component, created borders, centered text, and changed max width for a good aesthetic, also adjusted colors and fonts*/
         .blog-text {
             border: 3px solid $tertiary-color;
             border-radius: 4px;
             color: $secondary-color;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 80%;
             width: 80%;
             text-align: center; 
-            margin-left: 10px;
         }
 
 
@@ -313,31 +228,31 @@
             width: 100%;
             margin-bottom: 200px;
         }
-    /*graphical component, blog images */
+    /*graphical component, set flex display to center the image, then created borders for the images and adjusted the colours */
         .blog-post-image {
             display: flex;
             justify-content: center;
             
             img {
-                max-width: 90%;
-                height: auto;
-                display: block;
-                width: 200px;
-                max-height: 200px;
                 border: 10px solid $primary-color;
                 border-radius: 4px;
-
             }
         }
-        .blog-post-section {
+    }
+   
+@media screen and (max-width: $medium) {
+/* stuck to the same display flex options as the medium display */
+ main {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            margin-bottom: 40px;
         }
-    /* graphical and text component, scrolldown links to blog with subheading */
+/* for small displays I used display flex for the link-section so each link would display vertically then used justify-content to center them, used text align to center the text in the border and created a gap between each image, used margin-bottom and margin-top to separate content sections, then created borders ect. */
         .link-section {
             display: flex;
+            justify-content: center;
             text-align: center;
             gap: 20px;
             margin-bottom: 350px;
@@ -346,8 +261,7 @@
             .blog-link {
                 text-decoration: none;
                 border: 10px solid $tertiary-color;
-                border-radius: 4px;
-                margin-right: 43px;
+                border-radius: 4px; 
                 background-color: $tertiary-color;
     
                 p {
@@ -355,11 +269,63 @@
                     font-weight: bold;
                     color: $secondary-color;
                 }
-
-                img {
-                    max-width: 90%;
-                }
             }
+        }
+    /* stuck with flex display for the smaller wireframe */
+        .blog-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+/
+        .blog-post-section {
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+        }
+    /* text component, adjusted colors and fonts on headings*/
+        h2 {
+            color: $primary-color;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-self: center; 
+        }
+
+        h4 {
+            color: $tertiary-color;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    /* set borders and adjusted text size with font-size used text-align to center the text inside the border then added margin-left to further configure placing, also adjusted colors and fonts*/
+        .blog-text {
+            border: 3px solid $tertiary-color;
+            border-radius: 4px;
+            color: $secondary-color;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 80%;
+            width: 80%;
+            text-align: center; 
+            margin-left: 10px;
+        }
+  
+        .blog-post {
+            margin-bottom: 200px;
+        }
+
+        .blog-post-image {
+            display: flex;
+            justify-content: center;
+    /* graphical component, set a max-width so the images wouldnt go over the display size on smartphones, created borders */       
+            img {
+                max-width: 85%;
+                border: 10px solid $primary-color;
+                border-radius: 4px;
+            }
+        }
+
+        .blog-post-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 

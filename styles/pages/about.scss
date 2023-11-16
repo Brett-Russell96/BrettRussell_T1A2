@@ -1,6 +1,6 @@
 @import"../../index";
 
-   /*graphical element, scroll bar */
+   /*graphical element, scroll bar use the scrollbar function to set, size then thumb to set colour and round the edges and track to colour the background */
    ::-webkit-scrollbar {
     height: 1rem;
     width: 0.7rem;
@@ -18,20 +18,18 @@
 
 
 @media screen and (min-width: $large) {
-/* text component, about text  */
+/* text component/graphical component, about text using css grid, used 'repeat' so I could have 3 rows of adjustable sizes. image classes are also housed in this container */
     .about-container {
         display: grid;
         grid-template-columns: 30% 70%;
         grid-template-rows: repeat(3, auto);
         background-color: $primary-background;
-/* graphical component, photo */
     }
-
+/* graphical component, photo positioned using css grid then further adjusted by applying margin and justify-self. added a rounded border */
     .home-photo {
         grid-column: 1;
         grid-row-start: 1;
         grid-row-end: 2; 
-        margin-top: 60px;
         margin-right: 20px;
         margin-left: 20px;
         justify-self: center;
@@ -40,7 +38,7 @@
         height: 200px;
         width: 300px;
     }
-/*graphical component, photo */
+/*graphical component, photo positioned with css grid then further adjusted the position within its place in the grid using align-self for vertical and justify-self for horizontal. added a border which i rounded with border-radius */
     .gym-photo {
         grid-column: 1;
         grid-row-start: 2;
@@ -50,14 +48,14 @@
         border: 4px solid $tertiary-color;
         border-radius: 4px;
         height: 300px;
-        width: 240pxpx;
+        width: 240px;
     }
-
-
+/*text component, used css grid to position about-section then switched to a flex display for its contents allowing me to display them within the second column without specifying rows. */
     .about-section {
         grid-column: 2;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         margin-bottom: 20px;
     }
 
@@ -82,7 +80,7 @@
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 40px;
-/*graphical component, photo */
+/* graphical component, photo positioned using display flex then further adjusted with margins */
         .home-photo {
             height: 200px;
             max-width: 90%;
@@ -90,8 +88,8 @@
             margin-bottom: 20px;
             border: 4px solid $tertiary-color;
             border-radius: 4px;
-/* graphical component, photo */
         }
+/* graphical component, photo positioned using display flex the further adjusted using margins */
         .gym-photo {
             height: 290px;
             max-width: 85%;
@@ -100,25 +98,23 @@
             border: 4px solid $tertiary-color;
             border-radius: 4px;
         }
-/* text component, about text */
+/* text component, about text centered with text-align then used max-width to ensure the text fits well within the display  */
         .about-section {
             text-align: center;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            word-wrap: break-word;
-            max-width: 80%;
+            max-width: 90%;
             h2 {
                 color: $primary-color;
             }
             .about-text {
                 color: $secondary-color
             }
-
         }
     }
 }
 
 @media screen and (max-width: $small) {
-
+/* text component used font size to adjust text size for smaller displays */
     .about-section{
 
         .about-text {

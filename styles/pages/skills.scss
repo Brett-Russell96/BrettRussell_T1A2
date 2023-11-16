@@ -1,6 +1,6 @@
 @import"../../index";
 
-   /*graphical element, scroll bar */
+   /*graphical element, scroll bar size adjusted using 'scrollbar', then rounded using 'thumb, then the background is coloured using 'track*/
    ::-webkit-scrollbar {
     height: 1rem;
     width: 0.7rem;
@@ -18,21 +18,21 @@
 
 @media screen and (min-width: $large) {
 
-
-    .grid-container {
+/* text component, use css grid to position classes inside of skills-container repeat is used so that I dont need to define the size of my rows */
+    .skills-container {
         display: grid;
         grid-template-columns: 30% 70%;
         grid-template-rows: repeat(3, auto);
         background-color: $primary-background;
     }
-
+/* used ccs grid to position skils-section then display flex to display its contents vertically with flex direction */
     .skills-section {
         grid-column: 2;
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
     }
-/*text component, intro text */
+/*text component, intro text adjusted exact positioning with margin then adjusted color and font */
     .skills-text {
         margin-top: 10px;
         color: $secondary-color;
@@ -44,7 +44,7 @@
         color: $primary-color;
 
     }
-/* text component, skills list */
+/* text component, skills list dot points, color adjested as well as font and margin */
     li {
         color: $secondary-color;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -62,7 +62,7 @@
         margin-bottom: 20px;
         margin-left: 10%;
     }
-/* text component, resume download link */
+/* text component, used display block to give the content properties a box like structure then adjusted padding, max-width and border/border-radius to make that structure appear as a button in the display. customised font and colors then added '&:hover' function so that the color would darken when the button is hovered over which I adjusted using filter */
     .download-link {
         display: inline-block;
         padding: 10px 20px;
@@ -77,27 +77,24 @@
         border-radius: 6px;
         margin-left: 27%;
         transition: background-color 0.3s;
-
-    }
-
-    .download-link:hover {
-        filter: brightness(75%);
+        &:hover {
+            filter: brightness(75%);
+        }
     }
 }
 
 @media screen and (max-width: $large) {
-    main {
+        main {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 40px;
-/* text component, intro */
+/* text component, used display flex for smaller breakpoints and adjusted flex direction to display items vertically, align items to center everything, skills section houses all the text contents. used text align to center text on the display */
         .skills-section {
             text-align: center;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            word-wrap: break-word;
-            max-width: 80%;
+            max-width: 90%;
             h2 {
                 color: $primary-color;
             }
@@ -105,7 +102,7 @@
                 color: $secondary-color
             }
         }
-/* text component, skills list */
+/* text component, skills list uses margin-bottom to create gaps between each of the dot points adjusted font and color as well. used margin-left to further adjust positioning of additional-text (not sure why I only thought to use percentage values for margin in this section i must've been wanting to try a different value and then just forgot about it later on) */
         li {
             color: $secondary-color;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -116,12 +113,12 @@
             color: $secondary-color;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
-            max-width: 80%;
+            max-width: 90%;
             margin-top: 50px;
             margin-bottom: 20px;
-            margin-left: 14%;
+            margin-left: 9%;
         }
-/* text component, link to resume */
+/* text component, link to resume uses inline blick display, max-width, padding and border to create shape, then all the rest to adjust the colors and text font/weight on the display */
         .download-link {
             display: inline-block;
             padding: 10px 20px;
@@ -136,16 +133,15 @@
             border-radius: 6px;
             margin-left: 1%;
             transition: background-color 0.3s;
-    
-        }
-    
-        .download-link:hover {
-            filter: brightness(75%);
+                &:hover {
+                    filter: brightness(75%);
+            }
         }
     }
 }
-@media screen and (max-width: $small) {
 
+@media screen and (max-width: $small) {
+/* text component, adjusted the min width on the download link so the text would always display neatly, then adjusted font sizes for all text on smaller displays */
     .download-link {
         min-width: 100px;
     }

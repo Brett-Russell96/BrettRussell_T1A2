@@ -17,7 +17,7 @@
 </head>
 <body>
 <header>
-    <!--graphical component, site logo-->
+    <!--graphical component, site logo uses href to link back to home page-->
         <div class="logo-name">
             <a href="../index.html">
                 <img
@@ -27,7 +27,7 @@
             </a>
         </div>
         <h1>Blog</h1>
-        <!--text component, nav menu-->
+        <!--text component, nav menu links button class using href, <a> tags placed into nav-items class-->
         <nav id="nav-items">
             <a href="./about.html" class="button">About</a>
             <a href="./skills.html" class="button">Skills</a>
@@ -35,7 +35,7 @@
         </nav>
         <div class="background-box"></div>
     </header>
-    <!--text and graphical component, scrolldown links for blog posts-->
+    <!--text and graphical component, scrolldown links for blog posts, the '#' href and 'data-target' variables are used for the javascript to identify links, all links are placed into separate psuedo clases for styling purposes on css grid display. psuedo classes also contain images and are enclosed within the link-section main class-->
     <main class="link-section">
         <a href="#" class= "blog-link image1" data-target="blog-post-1">
             <img src="../images/Yuji.jpg" alt="Blog Post 1">
@@ -58,7 +58,7 @@
             <p>Blog Post 5</p>
         </a>
       </main>
-    <!--text and graphical components, blog posts and images-->
+    <!--text and graphical components, blog-container houses all components of this section so I could separate it from the link section with display flex. consists of blog-post psuedo classes that houses each post id is used to set data-target links for the javascript. also houses the blog text. graphical components are basesd on images housed in the section as well as the styling for the display aesthetic. -->
     <main class="blog-container">
         <div class="blog-post" id="blog-post-1">
             <div class="blog-post-image">
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-    <!--text and graphical component, blog post and image-->
+   <!--text and graphical components, blog-container houses all components of this section so I could separate it from the link section with display flex. consists of blog-post psuedo classes that houses each post id is used to set data-target links for the javascript. also houses the blog text. graphical components are basesd on images housed in the section as well as the styling for the display aesthetic. -->
         <div class="blog-post" id="blog-post-2">
             <div class="blog-post-image">
                 <img src="../images/Gintoki.jpg" alt="Blog Post 2 Image">
@@ -85,7 +85,7 @@
                 </div>
             </div>
         </div>
-    <!--text and grahical component, blog post and image-->
+   <!--text and graphical components, blog-container houses all components of this section so I could separate it from the link section with display flex. consists of blog-post psuedo classes that houses each post id is used to set data-target links for the javascript. also houses the blog text. graphical components are basesd on images housed in the section as well as the styling for the display aesthetic. -->
         <div class="blog-post" id="blog-post-3">
             <div class="blog-post-image">
                 <img src="../images/Midoriya.jpg" alt="Blog Post 3 Image">
@@ -98,7 +98,7 @@
                 </div>
             </div>
         </div>
-    <!--text and graphical component, blog post and image-->
+   <!--text and graphical components, blog-container houses all components of this section so I could separate it from the link section with display flex. consists of blog-post psuedo classes that houses each post id is used to set data-target links for the javascript. also houses the blog text. graphical components are basesd on images housed in the section as well as the styling for the display aesthetic. -->
         <div class="blog-post" id="blog-post-4">
             <div class="blog-post-image">
                 <img src="../images/Tanjiro.jpg" alt="Blog Post 4 Image">
@@ -111,7 +111,7 @@
                 </div>
             </div>
         </div>
-    <!--text and graphical component, blog post and image (not sure if I was supposed to do for all lol)-->
+   <!--text and graphical components, blog-container houses all components of this section so I could separate it from the link section with display flex. consists of blog-post psuedo classes that houses each post id is used to set data-target links for the javascript. also houses the blog text. graphical components are basesd on images housed in the section as well as the styling for the display aesthetic.(not sure if I was supposed to do for all lol)-->
         <div class="blog-post" id="blog-post-5">
             <div class="blog-post-image">
                 <img src="../images/Naruto.jpg" alt="Blog Post 5 Image">
@@ -127,7 +127,7 @@
     </main> 
 
     <footer>
-        <!--graphical component, footer links-->
+        <!--graphical component, footer links using href then placed into logos using <i> tag-->
         <div class="social-media">
             <a href="https://twitter.com/BrettRussell96">
                 <i class="fa-brands fa-square-twitter"></i>

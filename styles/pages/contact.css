@@ -231,7 +231,6 @@
     font-size: 80%;
   }
 }
-/*graphical component, body layout */
 body {
   margin: 0;
   background-color: #383636;
@@ -258,19 +257,15 @@ body {
 }
 
 @media screen and (min-width: 991px) {
-  /* graphical component, page layout*/
   main {
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 25% 25% 25% 25%;
-    /* text component, intro text style */
+    grid-template-rows: repeat(4, 25%);
+    /* text component, used css grid to position text underneath my heading to the right side of the display then adjusted font and colour */
   }
   main .home-text {
     grid-column: 2;
     grid-row: 1;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
     margin-bottom: 300px;
     color: #eab44b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -294,12 +289,12 @@ body {
     max-width: 75%;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 650px) {
   .home-text {
     font-size: 80%;
   }
 }
-/*graphical element, scroll bar */
+/*graphical element, scroll bar adjusted using scrollbar then rounded using thumb, background is set using track */
 ::-webkit-scrollbar {
   height: 1rem;
   width: 0.7rem;
@@ -319,26 +314,23 @@ body {
   main {
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 25% 25% 25% 25%;
-    /* text component, text */
-    /* graphical component, link to email */
+    grid-template-rows: repeat(4, 25%);
+    /* text component, css grid used to create very basic grid layout for my 2 items, used align-items to postion my text at the start of the column */
+    /* graphical component, pisitioned with css grid then used inline block, padding, border and width to create button shape, used justify-self to center, then customised colors and fonts, set and hover so the coour changes when someones mouse hovers over it which I adjusted using filter */
   }
   main .contact-text {
     grid-column: 2;
     grid-row: 1;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-bottom: 300px;
+    align-items: start;
     color: #eab44b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   main .button {
     grid-column: 2;
-    display: block;
+    grid-row: 3;
+    display: inline-block;
     padding: 10px;
     justify-self: center;
-    align-self: center;
     background-color: #eab44b;
     border-radius: 10px;
     text-align: center;
@@ -359,19 +351,18 @@ body {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 40px;
-    /* text component, text */
-    /* graphical component, link to email */
+    /* text component, used display flex and text-align to position text, adjusted margin to sparate from link and customised colors and fonts */
+    /* graphical component, used inline block display, padding, border-radius, and width to set shape, then customised colors and text, set &:active so it changes color when someone touches it */
   }
   main .contact-text {
     text-align: center;
     color: #eab44b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 40px;
-    word-wrap: break-word;
     max-width: 75%;
   }
   main .button {
-    display: block;
+    display: inline-block;
     padding: 10px;
     background-color: #eab44b;
     border-radius: 10px;
@@ -392,7 +383,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* graphical component, link to email */
+    /* graphical component, adjusted button width to look better and be accessible on smaller devices. set & active to change the colour of the button when someone touches it */
   }
   main .button {
     width: 35%;

@@ -231,7 +231,6 @@
     font-size: 80%;
   }
 }
-/*graphical component, body layout */
 body {
   margin: 0;
   background-color: #383636;
@@ -258,19 +257,15 @@ body {
 }
 
 @media screen and (min-width: 991px) {
-  /* graphical component, page layout*/
   main {
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 25% 25% 25% 25%;
-    /* text component, intro text style */
+    grid-template-rows: repeat(4, 25%);
+    /* text component, used css grid to position text underneath my heading to the right side of the display then adjusted font and colour */
   }
   main .home-text {
     grid-column: 2;
     grid-row: 1;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
     margin-bottom: 300px;
     color: #eab44b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -299,7 +294,7 @@ body {
     font-size: 80%;
   }
 }
-/*graphical element, scroll bar */
+/*graphical element, used scroll bar to adjust size, thumb to round and track to adjust background colour */
 ::-webkit-scrollbar {
   height: 1rem;
   width: 0.7rem;
@@ -316,14 +311,12 @@ body {
 }
 
 @media screen and (min-width: 991px) {
-  /* used flex display to span images across the display */
-  /*text and graphical component, scrolldown links with images and blog subheadings */
+  /*text and graphical component, used display flex to span images across the display, applied margin to create gaps between images, then created borders and adjusted colours and text. added &:hover so that the colour of the image and baclground darkens when hovered over with mouse */
   .link-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-width: 100vw;
-    /* applied a border which I then rounded for a smooth aesthetic, adjusted image margin to be consistent across desktop screensizes. also boldened text to improve readability. */
   }
   .link-section .blog-link {
     text-decoration: none;
@@ -345,22 +338,24 @@ body {
     font-weight: bold;
     color: #eab44b;
   }
-  /* used a flex display for more even spacing, applied a top and bottom margin to clearly separate from the link sections, also applied a gap for clear distinction between blog posts. */
+  .link-section .blog-link:hover {
+    filter: brightness(75%);
+  }
+  /* text component, used display flex and flex direction column to display posts vertically down the page then created a larger gap between them with gap. used margins to separate from other content sections */
   .blog-container {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 350px;
     margin-top: 300px;
     margin-bottom: 150px;
     margin-left: 50px;
+    /* text component, used display flex to better position each post */
   }
   .blog-container .blog-post {
     display: flex;
     align-items: flex-start;
-    /* I used a predetermined size for the images which I'd adjusted earlier via terminal resizing so I only needed to apply a border to keep the images neat and presentable, used a block display for more ease when creating the border and to seperate from text */
-    /* graphical component, blog images */
-    /*for text I used the same flex display for uniformity. adjusted the fonts and colors to keep with the visual theme of the site. */
-    /* text component, blog posts */
+    /* graphical component, adjusted height and width dimensions to keep the images the same size and in the same position as the screenwidth changes created a border and then adjusted exact position using margin. */
+    /*text component, created borders for all posts, used flex: 1 to ensure the image displays at its actual size, used display flex to display the headings and posts vertically then adjusted colors and fonts. */
   }
   .blog-container .blog-post .blog-post-image img {
     max-width: 100%;
@@ -406,62 +401,7 @@ body {
     align-items: center;
     margin-bottom: 40px;
   }
-  /* text component, blog posts */
-  .blog-post-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  /* text component (i think), blog heading */
-  h2 {
-    color: #8c8c8c;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    align-self: center;
-  }
-  h4 {
-    color: #757270;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  .blog-text {
-    border: 3px solid #757270;
-    border-radius: 4px;
-    color: #eab44b;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 70%;
-    text-align: center;
-  }
-  .blog-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .blog-post {
-    width: 100%;
-    margin-bottom: 200px;
-  }
-  /*graphical component, blog images */
-  .blog-post-image {
-    display: flex;
-    justify-content: center;
-  }
-  .blog-post-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    width: 200px;
-    max-height: 200px;
-    border: 10px solid #8c8c8c;
-    border-radius: 4px;
-  }
-  .blog-post-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  /* graphical and text component, scrolldown links to blog with subheading */
+  /* graphical component, I set the anchor links to a grid display as I thought this aesthetic would be a better aesthetic for tablets, created gaps between the images with gap, separated content sections with margin-top and margin-bottom, margin-left ensures the images stay centered as the screenwidth changes, then placed each image separately into their section of the grid to fit the display properly, then created borders, configured colors, and further adjusted sizings. */
   .link-section {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -491,7 +431,6 @@ body {
     color: #eab44b;
     text-align: center;
   }
-  /* graphical component, blog anchor links */
   .image1 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -522,7 +461,52 @@ body {
     grid-row: 2;
     justify-self: center;
   }
+  /* text component, set flex display for blog posts and made everyting diplay vertically using flex direction, then configured positioning with justify-content and align-items. */
+  .blog-post-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  h2 {
+    color: #8c8c8c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-self: center;
+  }
+  h4 {
+    color: #757270;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  /* text component, created borders, centered text, and changed max width for a good aesthetic, also adjusted colors and fonts*/
+  .blog-text {
+    border: 3px solid #757270;
+    border-radius: 4px;
+    color: #eab44b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    text-align: center;
+  }
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog-post {
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  /*graphical component, set flex display to center the image, then created borders for the images and adjusted the colours */
+  .blog-post-image {
+    display: flex;
+    justify-content: center;
+  }
+  .blog-post-image img {
+    border: 10px solid #8c8c8c;
+    border-radius: 4px;
+  }
 }
+/* graphical and text component, scrolldown links to blog with subheading */
 @media screen and (max-width: 720px) {
   main {
     display: flex;
