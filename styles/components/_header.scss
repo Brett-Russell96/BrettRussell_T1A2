@@ -13,7 +13,7 @@
             grid-template-columns: 30% 70%;
             grid-template-rows: 33% 33% 33%;
             grid-gap: 0;
-            max-width: 100%;
+            min-width: 100vw;
         }
 /* graphical component, navigation links */
         #nav-items {
@@ -139,7 +139,7 @@
 }
 
 /* made minor adjustment to button and logo size to fit smartphones better */
-@media screen and (max-width: $medium) {
+@media screen and (max-width: $small) {
     header {
         display: flex;
         flex-direction: column;

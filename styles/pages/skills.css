@@ -5,7 +5,7 @@
     grid-template-columns: 30% 70%;
     grid-template-rows: 33% 33% 33%;
     grid-gap: 0;
-    max-width: 100%;
+    min-width: 100vw;
   }
   /* graphical component, navigation links */
   #nav-items {
@@ -108,7 +108,7 @@
   }
 }
 /* made minor adjustment to button and logo size to fit smartphones better */
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 650px) {
   header {
     display: flex;
     flex-direction: column;
@@ -218,7 +218,7 @@
     text-align: center;
   }
 }
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 650px) {
   /* I decided to make some slight differences in icon and text sizes for improved visability when swithing between tablet and smartphone sizes */
   footer {
     /*graphical component, social media (not sure if we're meant to note all these tbh just putting in to be sure) */
@@ -292,6 +292,11 @@ body {
     margin-bottom: 40px;
     word-wrap: break-word;
     max-width: 75%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .home-text {
+    font-size: 80%;
   }
 }
 /*graphical element, scroll bar */
@@ -426,7 +431,7 @@ body {
     filter: brightness(75%);
   }
 }
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 650px) {
   .download-link {
     min-width: 100px;
   }

@@ -109,7 +109,7 @@
         }
     }
 
-@media screen and (max-width: $medium) {
+@media screen and (max-width: $small) {
 
     /* I decided to make some slight differences in icon and text sizes for improved visability when swithing between tablet and smartphone sizes */
     footer {
@@ -127,8 +127,7 @@
                 font-size: 80%;
             }
         }
-    }
-    
+    }   
 
 
 
