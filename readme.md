@@ -500,5 +500,9 @@ The html is comprised of 2 sections, the link section and the blog container:
 * Netlify
 * Github
 
+## links
+Github Repository : https://github.com/Brett-Russell96/BrettRussell_T1A2
 
+Website Link: https://brettrussellt1a2-d3b4b5.netlify.app/
 
+Youtube Video:
